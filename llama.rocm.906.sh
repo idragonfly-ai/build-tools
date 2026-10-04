@@ -48,6 +48,7 @@ sudo ldconfig
 echo "Configuring cmake..."
 HIPCXX="$(hipconfig -l)/clang"
 HIP_PATH="$(hipconfig -R)"
+HIP_DEVICE_LIB_PATH="$ACTIVE_ROCM_PATH" \
 
 cmake -B build \
     -DCMAKE_C_COMPILER=/usr/bin/hipcc \
